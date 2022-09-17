@@ -4,7 +4,7 @@ from curses.ascii import isdigit
 context = False
 
 def somme(x, y):
-    return int(x) + int(y)
+    return float(x) + float(y)
 
 
 while context == False:
