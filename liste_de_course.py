@@ -19,6 +19,7 @@ choix = 0
 
 while int(choix) != 5:
     print(options)
+    print("\n")
     choix = input("Vôtre choix: ")
 
     if int(choix) == 1:
@@ -26,8 +27,12 @@ while int(choix) != 5:
         if a_ajouter not in liste_de_course:
             liste_de_course.append(a_ajouter)
             print("Le nouvel élément a bien été ajouter")
+            print("*"*15)
+            print("\n")
         else:
             print("Cet élément se trouve déjà dans la liste")
+            print("*"*15)
+            print("\n")
 
     elif int(choix) == 2:
         a_retirer = input("Elément de la liste à retirer: ")
@@ -38,18 +43,24 @@ while int(choix) != 5:
 
     elif int(choix) == 3:
         if liste_de_course:
-            print("\n"*2)
+            print("\n")
             print("*"*15)
             for i, item in enumerate(liste_de_course, 1):
                 print(f"{i}. {item}")
             print("*"*15)
-            print("\n"*2)
+            print("\n")
         else:
             print("La liste de course est vide")
+            print("*"*15)
+            print("\n")
 
     elif int(choix) == 4:
         liste_de_course.clear()
         print("La liste a bien été vidée")
+        print("*"*15)
+        print("\n")
 
     else:
         print("Veuillez rentrer un chiffre compris entre 1 et 5")
+        print("*"*15)
+        print("\n")
