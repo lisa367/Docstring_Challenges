@@ -8,9 +8,9 @@
     # sinon : recommencer le procédé précédent
 
 
-options  = """ 1: Ajouter un élément dans la liste
+options  = """1: Ajouter un élément dans la liste
 2: Retier un élément de la liste
-3: Afficher la lister
+3: Afficher la liste
 4: Vider la liste
 5: Quitter"""
 
@@ -37,8 +37,15 @@ while int(choix) != 5:
             print("Cet élément n'est pas dans la liste")
 
     elif int(choix) == 3:
-        for i, item in enumerate(liste_de_course, 1):
-            print(f"{i}. {item}")
+        if liste_de_course:
+            print("\n"*2)
+            print("*"*15)
+            for i, item in enumerate(liste_de_course, 1):
+                print(f"{i}. {item}")
+            print("*"*15)
+            print("\n"*2)
+        else:
+            print("La liste de course est vide")
 
     elif int(choix) == 4:
         liste_de_course.clear()
