@@ -60,7 +60,7 @@ while int(choix) != 5:
         print("*"*15)
         print("\n")
 
-    else:
+    elif int(choix) not in list(range(6)):
         print("Veuillez rentrer un chiffre compris entre 1 et 5")
         print("*"*15)
         print("\n")
