@@ -20,7 +20,7 @@ choix = 0
 while int(choix) != 5:
     print(options)
     print("\n")
-    choix = input("Vôtre choix: ")
+    choix = input("Votre choix: ")
 
     if int(choix) == 1:
         a_ajouter = input("Entrez le nom d'un élément à ajouter dans la liste: ")
@@ -45,12 +45,13 @@ while int(choix) != 5:
         if liste_de_course:
             print("\n")
             print("*"*15)
+            print("Voici le contenu de votre liste:")
             for i, item in enumerate(liste_de_course, 1):
                 print(f"{i}. {item}")
             print("*"*15)
             print("\n")
         else:
-            print("La liste de course est vide")
+            print("Votre liste de course est vide")
             print("*"*15)
             print("\n")
 
