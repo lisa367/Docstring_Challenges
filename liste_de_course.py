@@ -23,10 +23,10 @@ while int(choix) != 5:
     choix = input("Vôtre choix: ")
 
     if int(choix) == 1:
-        a_ajouter = input("Elément à ajouter dans la liste: ")
+        a_ajouter = input("Entrez le nom d'un élément à ajouter dans la liste: ")
         if a_ajouter not in liste_de_course:
             liste_de_course.append(a_ajouter)
-            print("Le nouvel élément a bien été ajouter")
+            print(f"L'élément {a_ajouter} a bien été ajouté à la liste.")
             print("*"*15)
             print("\n")
         else:
