@@ -30,16 +30,17 @@ while int(choix) != 5:
             print("*"*15)
             print("\n")
         else:
-            print(f"L'élément {a_ajouter} se trouve déjà dans la liste")
+            print(f"L'élément {a_ajouter} se trouve déjà dans la liste.")
             print("*"*15)
             print("\n")
 
     elif int(choix) == 2:
-        a_retirer = input("Elément de la liste à retirer: ")
+        a_retirer = input("Entrez le nom d'un élément à retirer de la liste: ")
         if a_retirer in liste_de_course:
             liste_de_course.remove(a_retirer)
+            print(f"L'élément {a_retirer} a bien été supprimé de la liste.")
         else:
-            print("Cet élément n'est pas dans la liste")
+            print(f"L'élément {a_retirer} ne se trouve pas dans la liste.")
 
     elif int(choix) == 3:
         if liste_de_course:
