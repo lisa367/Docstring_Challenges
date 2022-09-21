@@ -40,7 +40,7 @@ while int(choix) != 5:
             liste_de_course.remove(a_retirer)
             print(f"L'élément {a_retirer} a bien été supprimé de la liste.")
         else:
-            print(f"L'élément {a_retirer} ne se trouve pas dans la liste.")
+            print(f"L'élément {a_retirer} n'est pas dans la liste.")
 
     elif int(choix) == 3:
         if liste_de_course:
