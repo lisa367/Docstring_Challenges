@@ -7,6 +7,8 @@
     # si l'option choisie est 'quitter' : arrêter le programme
     # sinon : recommencer le procédé précédent
 
+import sys
+
 
 options  = """1: Ajouter un élément dans la liste
 2: Retier un élément de la liste
@@ -16,8 +18,9 @@ options  = """1: Ajouter un élément dans la liste
 
 liste_de_course = []
 choix = 0
+context = False
 
-while int(choix) != 5:
+while context == False:
     print(options)
     print("\n")
     choix = input("Votre choix: ")
@@ -62,7 +65,13 @@ while int(choix) != 5:
         print("*"*15)
         print("\n")
 
-    elif int(choix) not in list(range(6)):
+    elif int(choix) == 5:
+        print("A bientôt !")
+        context = True
+
+    else:
         print("Veuillez rentrer un chiffre compris entre 1 et 5")
         print("*"*15)
         print("\n")
+
+sys.exit()
