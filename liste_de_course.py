@@ -30,7 +30,7 @@ while int(choix) != 5:
             print("*"*15)
             print("\n")
         else:
-            print("Cet élément se trouve déjà dans la liste")
+            print(f"L'élément {a_ajouter} se trouve déjà dans la liste")
             print("*"*15)
             print("\n")
 
