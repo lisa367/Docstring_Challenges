@@ -52,13 +52,13 @@ while int(choix) != 5:
             print("*"*15)
             print("\n")
         else:
-            print("Votre liste de course est vide")
+            print("Votre liste ne contient aucun élément.")
             print("*"*15)
             print("\n")
 
     elif int(choix) == 4:
         liste_de_course.clear()
-        print("La liste a bien été vidée")
+        print("Votre liste a bien été vidée de son contenu.")
         print("*"*15)
         print("\n")
 
