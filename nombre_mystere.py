@@ -9,9 +9,9 @@ while essais > 0:
     choix = input("Devine le nombre: ")
     essais -= 1
     if int(choix) == nombre_mystere:
-        win = True
         print(f"Bravo ! Le nombre mystère était bien {nombre_mystere} !")
         print(f"Tu as trouvé le nombre en {5 - essais} essais.")
+        win = True
         essais = 0
     else:
         if int(choix) > nombre_mystere:
