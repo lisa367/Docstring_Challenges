@@ -12,6 +12,10 @@ while essais > 0:
         print(f"Bravo ! Le nombre mystère était bien {nombre_mystere} !")
         print(f"Tu as trouvé le nombre en {essais} essais.")
     else:
+        if choix > nombre_mystere:
+            print(f"Le nombre mystère est plus grand que {choix}")
+        else:
+            print(f"Le nombre mystère est plus petit que {choix}")
         print(f"Il te reste {essais} essais")
 
 if essais == 0 and win == False:
