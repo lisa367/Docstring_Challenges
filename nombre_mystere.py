@@ -1,12 +1,12 @@
 import random
 
 nombre_mystere = random.randint(0, 100)
-essais = 0
+essais = 5
 win = False
 
-while essais < 5 or win == False:
+while essais > 0:
     choix = input("Devine le nombre: ")
-    essais += 1
+    essais -= 1
     if choix == nombre_mystere:
         win = True
         print(f"Bravo ! Le nombre mystère était bien {nombre_mystere} !")
@@ -14,7 +14,7 @@ while essais < 5 or win == False:
     else:
         print(f"Il te reste {essais} essais")
 
-if essais == 5 and win == False:
+if essais == 0 and win == False:
     print(f"Dommage ! Le nombre mystère était {nombre_mystere}")
 
 print("Fin du jeu.")
