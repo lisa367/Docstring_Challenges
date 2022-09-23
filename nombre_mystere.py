@@ -4,7 +4,10 @@ nombre_mystere = random.randint(0, 100)
 essais = 5
 win = False
 
+print("*** Le jeu du nombre mystere ***")
+print(f"Il te reste {essais} essais")
 # print("Nombre mystere: ", nombre_mystere)
+
 while essais > 0:
     choix = input("Devine le nombre: ")
     essais -= 1
