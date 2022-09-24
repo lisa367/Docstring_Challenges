@@ -5,7 +5,7 @@ class Liste:
     def __init__(self, nom):
         self.nom = nom
 
-        with open(f"{self.nom}.json", 'w') as file:
+        with open(f"{self.nom}.json", 'w'):
             json.dump({})
 
     def __repr__(self):
