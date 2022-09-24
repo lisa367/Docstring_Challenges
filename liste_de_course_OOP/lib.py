@@ -1,5 +1,6 @@
 # Méthodes: ajouter, enlever, afficher, sauvegarder
 import json
+import pathlib
 
 class Liste:
     def __init__(self, nom):
