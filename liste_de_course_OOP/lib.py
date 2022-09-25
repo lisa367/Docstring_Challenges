@@ -17,7 +17,8 @@ class Liste:
             json.dump({})
 
     def ajouter(self, item):
-        pass
+        with open(f"{self.nom}.json", 'w') as file:
+            json.dump({"item"})
 
     def afficher(self, liste):
         pass
