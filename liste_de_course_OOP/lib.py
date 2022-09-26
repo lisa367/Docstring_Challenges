@@ -12,12 +12,15 @@ class Liste:
         with open(self.file_name, 'w') as file:
             json.dump([], file)
 
+
     def __repr__(self):
         return f"Liste: {self.nom}"
+
 
     def create_list(self):
         with open(self.file_name, 'w') as file:
             json.dump([], file)
+
 
     def ajouter(self, item):
         with open(self.file_name, 'r') as file:
@@ -26,15 +29,19 @@ class Liste:
         with open(self.file_name, 'w') as file:
             json.dump(liste, file, indent=4)
 
+
     def afficher(self, liste):
         with open(self.file_name, 'r') as file:
             liste = json.load(file)
-        print(f"***{self.nom.capitalize()}***")
+        print("*" * 15)
+        print(f"{self.nom.capitalize()}:")
         for item in liste:
             pprint(item)
 
+
     def enlever(self, item):
         pass
+
 
     def vider(self):
         with open(self.file_name, "r") as file:
@@ -43,8 +50,10 @@ class Liste:
         with open(self.file_name, 'w') as file:
             json.dump(self.file_name, liste)
     
+
     def sauvegarder(self, liste):
         pass
+
 
     def delete_list(self):
         self.working_directory.joinpath(self.file_name).unlink()
