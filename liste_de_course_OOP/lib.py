@@ -7,18 +7,18 @@ class Liste:
         self.nom = nom
 
         with open(f"{self.nom}.json", 'w'):
-            json.dump({})
+            json.dump({}, file)
 
     def __repr__(self):
         return self.nom
 
     def create_list(self):
         with open(f"{self.nom}.json", 'w') as file:
-            json.dump({})
+            json.dump({}, file)
 
     def ajouter(self, item):
-        with open(f"{self.nom}.json", 'w'):
-            json.dump({"item"})
+        with open(f"{self.nom}.json", 'w') as file:
+            json.dump({"item"}, file)
 
     def afficher(self, liste):
         pass
