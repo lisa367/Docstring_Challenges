@@ -1,12 +1,13 @@
 # Méthodes: ajouter, enlever, afficher, sauvegarder
 import json
-import pathlib
+from pathlib import Path
 from pprint import pprint
 
 class Liste:
     def __init__(self, nom):
         self.nom = nom
         self.file_name = f"{nom}.json"
+        self.working_directory = Path.cwd()
 
         with open(self.file_name, 'w') as file:
             json.dump([], file)
@@ -26,7 +27,11 @@ class Liste:
             json.dump(liste, file, indent=4)
 
     def afficher(self, liste):
-        pass
+        with open(self.file_name, 'r') as file:
+            liste = json.load(file)
+        print(f"***{self.nom.capitalize()}***")
+        for item in liste:
+            pprint(item)
 
     def enlever(self, item):
         pass
@@ -42,4 +47,4 @@ class Liste:
         pass
 
     def delete_list(self):
-        pass
+        self.working_directory.joinpath(self.file_name).unlink()
