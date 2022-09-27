@@ -2,8 +2,8 @@ from pathlib import Path
 import shutil
 
 working_directory = Path.cwd()
-files = [file for file in working_directory if file.is_file()]
-directories = [directory for directory in working_directory if directory.is_dir()]
+files = [file for file in working_directory.iterdir() if file.is_file()]
+directories = [directory for directory in working_directory.iterdir() if directory.is_dir()]
 # print(working_directory)
 # print(files)
 # print(directories)
