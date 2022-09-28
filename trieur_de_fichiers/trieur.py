@@ -18,3 +18,4 @@ for file in files:
         new_dir.mkdir(exist_ok=True)
         # Déplacer le fichier dans le nouveau dossier
         shutil.move(file, new_dir)
+        # file.rename(new_dir/file.name)
