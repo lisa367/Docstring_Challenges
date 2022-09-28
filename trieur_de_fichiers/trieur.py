@@ -12,10 +12,10 @@ for file in files:
     extension = file.split(".")[-1]
     # extension = file.suffix()
     if extension in directories:
-        pass
+        shutil.move(file, extension)
     else:
         new_dir = working_directory / extension
         new_dir.mkdir(exist_ok=True)
         # Déplacer le fichier dans le nouveau dossier
         shutil.move(file, new_dir)
-        # file.rename(new_dir/file.name)
+        # file.rename(new_dir / file.name)
