@@ -12,7 +12,8 @@ for file in files:
     extension = file.split(".")[-1]
     # extension = file.suffix()
     if extension in directories:
-        shutil.move(file, extension)
+        dir = working_directory / extension
+        shutil.move(file, dir)
     else:
         new_dir = working_directory / extension
         new_dir.mkdir(exist_ok=True)
