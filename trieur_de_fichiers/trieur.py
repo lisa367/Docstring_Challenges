@@ -10,7 +10,7 @@ directories = [directory for directory in working_directory.iterdir() if directo
 
 for file in files:
     extension = file.split(".")[-1]
-    # extension = file.suffix
+    # extension = file.suffix()
     if extension in directories:
         pass
     else:
