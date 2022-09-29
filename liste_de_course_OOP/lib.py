@@ -40,7 +40,12 @@ class Liste:
 
 
     def enlever(self, item):
-        pass
+        with open(self.file_name, 'r') as file:
+            liste = json.load(file)
+        indice = liste.find(item)
+        liste.pop(indice)
+        with open(self.file_name, 'w') as file:
+            json.dump(file, liste)
 
 
     def vider(self):
