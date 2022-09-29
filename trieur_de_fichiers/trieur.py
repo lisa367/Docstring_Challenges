@@ -9,8 +9,13 @@ directories = [directory for directory in working_directory.iterdir() if directo
 # print(directories)
 
 for file in files:
+    extension = file.suffix()
+    new_dir = working_directory / extension
+    new_dir.mkdir(exist_ok=True)
+    file.rename(new_dir / file.name)
+
+    """ 
     extension = file.split(".")[-1]
-    # extension = file.suffix()
     if extension in directories:
         dir = working_directory / extension
         shutil.move(file, dir)
@@ -19,4 +24,5 @@ for file in files:
         new_dir.mkdir(exist_ok=True)
         # Déplacer le fichier dans le nouveau dossier
         shutil.move(file, new_dir)
-        # file.rename(new_dir / file.name)
+
+    """
