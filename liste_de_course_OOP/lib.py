@@ -57,7 +57,7 @@ class Liste:
     
 
     def sauvegarder(self, liste):
-        pass
+        self.working_directory.save()
 
 
     def delete_list(self):
