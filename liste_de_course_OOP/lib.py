@@ -57,7 +57,9 @@ class Liste:
     
 
     def sauvegarder(self, liste):
-        self.working_directory.save()
+        data = self.working_directory / "data" / self.file_name
+        with open(data, 'w') as file:
+            json.dump(self.liste, file)
 
 
     def delete_list(self):
