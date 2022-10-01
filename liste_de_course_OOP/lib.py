@@ -8,6 +8,7 @@ class Liste:
         self.nom = nom
         self.file_name = f"{nom}.json"
         self.working_directory = Path.cwd()
+        self.liste = []
 
         with open(self.file_name, 'w') as file:
             json.dump([], file)
