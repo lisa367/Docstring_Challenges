@@ -12,11 +12,6 @@ class Liste:
         with open(self.file_name, 'w') as file:
             json.dump([], file)
 
-    def __post_init__(self):
-        with open(self.file_name, 'w') as file:
-            json.dump([], file)
-
-
     def __repr__(self):
         return f"Liste: {self.nom}"
 
@@ -67,3 +62,9 @@ class Liste:
     def delete_list(self):
         self.working_directory.joinpath(self.file_name).unlink()
         ###
+
+    """
+    def __post_init__(self):
+        with open(self.file_name, 'w') as file:
+            json.dump([], file)
+"""
