@@ -18,11 +18,10 @@ class Liste:
 
 
     def ajouter(self, item):
-        with open(self.file_name, 'r') as file:
-            liste = json.load(file)
-        liste.append(item)
-        with open(self.file_name, 'w') as file:
-            json.dump(liste, file, indent=4)
+        if type(item) == list:
+            self.liste.extend(item)
+        else:
+            self.liste.append(item)
 
 
     def afficher(self, liste):
@@ -61,4 +60,11 @@ class Liste:
     def __post_init__(self):
         with open(self.file_name, 'w') as file:
             json.dump([], file)
+
+    def ajouter(self, item):
+        with open(self.file_name, 'r') as file:
+            liste = json.load(file)
+        liste.append(item)
+        with open(self.file_name, 'w') as file:
+            json.dump(liste, file, indent=4)
 """
