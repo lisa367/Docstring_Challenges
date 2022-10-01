@@ -49,11 +49,8 @@ class Liste:
 
 
     def vider(self):
-        with open(self.file_name, "r") as file:
-            liste = json.load(file)
-        liste.clear()
-        with open(self.file_name, 'w') as file:
-            json.dump(self.file_name, liste)
+        self.liste.clear()
+        
     
 
     def sauvegarder(self, liste):
