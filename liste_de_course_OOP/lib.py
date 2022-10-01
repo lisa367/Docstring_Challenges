@@ -31,11 +31,9 @@ class Liste:
 
 
     def afficher(self, liste):
-        with open(self.file_name, 'r') as file:
-            liste = json.load(file)
         print("*" * 15)
         print(f"{self.nom.capitalize()}:")
-        for item in liste:
+        for item in self.liste:
             pprint(item)
 
 
@@ -43,7 +41,7 @@ class Liste:
         indice = self.liste.find(item)
         self.liste.pop(indice)
         
-        
+
     def vider(self):
         self.liste.clear()
         
