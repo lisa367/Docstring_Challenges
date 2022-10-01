@@ -17,11 +17,6 @@ class Liste:
         return f"Liste: {self.nom}"
 
 
-    def create_list(self):
-        with open(self.file_name, 'w') as file:
-            json.dump([], file)
-
-
     def ajouter(self, item):
         with open(self.file_name, 'r') as file:
             liste = json.load(file)
@@ -57,7 +52,12 @@ class Liste:
         self.working_directory.joinpath(self.file_name).unlink()
         ###
 
-    """
+"""
+
+    def create_list(self):
+        with open(self.file_name, 'w') as file:
+            json.dump([], file)
+
     def __post_init__(self):
         with open(self.file_name, 'w') as file:
             json.dump([], file)
