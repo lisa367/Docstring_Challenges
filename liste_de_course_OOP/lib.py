@@ -49,7 +49,7 @@ class Liste:
 
     def delete_list(self):
         # self.working_directory.joinpath(self.file_name).unlink()
-        pass
+        del self.liste
         ###
 
 """
