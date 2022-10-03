@@ -16,6 +16,8 @@ class Liste:
     def __repr__(self):
         return f"Liste: {self.nom}"
 
+    def __del__(self):
+        return f"La liste {self.nom} a été supprimée."
 
     def ajouter(self, item):
         if type(item) == list:
