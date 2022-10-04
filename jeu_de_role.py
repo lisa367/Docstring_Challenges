@@ -17,5 +17,6 @@ while vie_joueur > 0 or vie_ennemi > 0:
         if potions > 0:
             utilisation_potions = random.randint(15, 50)
             vie_joueur += utilisation_potions
+            potions -= 1
         else:
             print("Il ne reste plus de potions.")
