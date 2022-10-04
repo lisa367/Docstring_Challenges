@@ -12,6 +12,9 @@ while vie_joueur > 0 or vie_ennemi > 0:
     if choix == 1:
         attaque_joueur = random.randint(5, 10)
         attaque_ennemi = random.randint(5, 15)
+
+        vie_joueur -= attaque_ennemi
+        vie_ennemi -= attaque_joueur
     
     elif choix == 2:
         if potions > 0:
