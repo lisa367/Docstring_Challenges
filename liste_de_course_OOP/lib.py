@@ -23,6 +23,7 @@ class Liste:
     def __del__(self):
         return f"La liste {self.nom} a été supprimée."
 
+
     def ajouter(self, item):
         if type(item) == list:
             self.liste.extend(item)
@@ -46,7 +47,6 @@ class Liste:
         self.liste.clear()
         
     
-
     def sauvegarder(self, liste):
         data = self.working_directory / "data" / self.file_name
         with open(data, 'w') as file:
@@ -56,7 +56,7 @@ class Liste:
     def delete_list(self):
         # self.working_directory.joinpath(self.file_name).unlink()
         del self.liste
-        ###
+        
 
 """
 
