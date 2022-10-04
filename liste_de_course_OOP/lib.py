@@ -16,6 +16,10 @@ class Liste:
     def __repr__(self):
         return f"Liste: {self.nom}"
 
+    def __str__(self):
+        return f"Cette liste est une liste de {self.nom}"
+
+
     def __del__(self):
         return f"La liste {self.nom} a été supprimée."
 
