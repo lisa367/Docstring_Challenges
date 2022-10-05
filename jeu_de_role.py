@@ -30,6 +30,10 @@ while vie_joueur > 0 or vie_ennemi > 0:
             vie_joueur += utilisation_potions
             potions -= 1
 
-            print(f"Vous recupérez {} points de vie")
+            print(f"Vous recupérez {utilisation_potions} points de vie")
         else:
             print("Il ne reste plus de potions.")
+
+
+# Passer un tour
+# transformer les attaques en fonctions ou en classes
