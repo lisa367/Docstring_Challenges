@@ -18,6 +18,9 @@ while vie_joueur > 0 or vie_ennemi > 0:
 
         print(f"Vous avez infligé {attaque_joueur} points de dégâts à l'ennemi")
         print(f"L'ennemi vous a infligé {attaque_ennemi} points de dégâts")
+
+        print(f"Il vous restes {vie_joueur} points de vie")
+        print(f"Il reste {vie_ennemi} points de vie à l'ennemi")
     
     elif choix == 2:
         if potions > 0:
