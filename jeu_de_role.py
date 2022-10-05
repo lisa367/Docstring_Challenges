@@ -21,11 +21,15 @@ while vie_joueur > 0 or vie_ennemi > 0:
 
         print(f"Il vous restes {vie_joueur} points de vie")
         print(f"Il reste {vie_ennemi} points de vie à l'ennemi")
+
+        print("-"*30)
     
     elif choix == 2:
         if potions > 0:
             utilisation_potions = random.randint(15, 50)
             vie_joueur += utilisation_potions
             potions -= 1
+
+            print(f"Vous recupérez {} points de vie")
         else:
             print("Il ne reste plus de potions.")
