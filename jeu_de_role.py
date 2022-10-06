@@ -37,3 +37,8 @@ while vie_joueur > 0 or vie_ennemi > 0:
 
 # Passer un tour
 # transformer les attaques en fonctions ou en classes
+def attaque_joueur():
+    pass
+
+def attaque_ennemi():
+    pass
