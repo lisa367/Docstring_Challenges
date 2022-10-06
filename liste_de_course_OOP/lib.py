@@ -10,8 +10,8 @@ class Liste:
         self.working_directory = Path.cwd()
         self.liste = []
 
-        with open(self.file_name, 'w') as file:
-            json.dump([], file)
+        #with open(self.file_name, 'w') as file:
+            #json.dump([], file)
 
     def __repr__(self):
         return f"Liste: {self.nom}"
@@ -31,7 +31,7 @@ class Liste:
             self.liste.append(item)
 
 
-    def afficher(self, liste):
+    def afficher(self):
         print("*" * 15)
         print(f"{self.nom.capitalize()}:")
         for item in self.liste:
