@@ -9,7 +9,13 @@ potions = 3
 
 while vie_joueur > 0 or vie_ennemi > 0:
     choix = input("Souhaitez-vous attaquer (1) ou utiliser une potion (2) ?")
+    saute_un_tour = False
     if choix == 1:
+        if saute_un_tour:
+            attaque_ennemi()
+        else:
+            attaque_joueur()
+            attaque_ennemi()
         attaque_joueur = random.randint(5, 10)
         attaque_ennemi = random.randint(5, 15)
 
