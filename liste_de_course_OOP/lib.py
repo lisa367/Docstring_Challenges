@@ -48,8 +48,10 @@ class Liste:
         
     
     def sauvegarder(self, liste):
-        data = self.working_directory / "data" / self.file_name
-        with open(data, 'w') as file:
+        data = self.working_directory / "data"
+        data.mkdir(exist_ok=True)
+        file_path = self.working_directory / "data" / self.file_name
+        with open(file_path, 'w') as file:
             json.dump(self.liste, file)
 
 
