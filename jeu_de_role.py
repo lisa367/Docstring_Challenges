@@ -7,6 +7,18 @@ vie_ennemi = 50
 
 potions = 3
 
+def attaque_joueur():
+    attaque_joueur = random.randint(5, 10)
+    vie_ennemi -= attaque_joueur
+
+    return attaque_joueur, vie_ennemi
+
+def attaque_ennemi():
+    attaque_ennemi = random.randint(5, 15)
+    vie_joueur -= attaque_ennemi
+
+    return attaque_ennemi, vie_joueur
+
 while vie_joueur > 0 or vie_ennemi > 0:
     choix = input("Souhaitez-vous attaquer (1) ou utiliser une potion (2) ?")
     saute_un_tour = False
@@ -44,18 +56,6 @@ while vie_joueur > 0 or vie_ennemi > 0:
 
 # Passer un tour
 # transformer les attaques en fonctions ou en classes
-def attaque_joueur():
-    attaque_joueur = random.randint(5, 10)
-    vie_ennemi -= attaque_joueur
-
-    return attaque_joueur, vie_ennemi
-
-def attaque_ennemi():
-    attaque_ennemi = random.randint(5, 15)
-    vie_joueur -= attaque_ennemi
-
-    return attaque_ennemi, vie_joueur
-
 
 
     """        attaque_joueur = random.randint(5, 10)
