@@ -72,3 +72,7 @@ while vie_joueur > 0 or vie_ennemi > 0:
         print(f"Il reste {vie_ennemi} points de vie à l'ennemi")
 
     """
+
+    class Attaque:
+        def __init__(self, attaquant, cible, minimum, maximum):
+            pass
