@@ -75,4 +75,9 @@ while vie_joueur > 0 or vie_ennemi > 0:
 
     class Attaque:
         def __init__(self, attaquant, cible, minimum, maximum):
-            pass
+            self.attaquant = attaquant
+            self.cible = cible
+            self.minimum = minimum
+            self.maximum = maximum
+        
+        
