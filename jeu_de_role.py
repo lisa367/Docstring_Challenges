@@ -80,4 +80,8 @@ while vie_joueur > 0 or vie_ennemi > 0:
             self.minimum = minimum
             self.maximum = maximum
         
-        
+        def attaquer(self):
+            attaque = random.randint(self.minimum, self.maximum)
+            vie_cible -= attaque
+
+            return attaque, vie_cible
