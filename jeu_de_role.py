@@ -74,14 +74,14 @@ while vie_joueur > 0 or vie_ennemi > 0:
     """
 
     class Attaque:
-        def __init__(self, attaquant, cible, minimum, maximum):
+        def __init__(self, attaquant, vie_cible, minimum, maximum):
             self.attaquant = attaquant
-            self.cible = cible
+            self.vie_cible = vie_cible
             self.minimum = minimum
             self.maximum = maximum
         
         def attaquer(self):
             attaque = random.randint(self.minimum, self.maximum)
-            vie_cible -= attaque
+            self.vie_cible -= attaque
 
-            return attaque, vie_cible
+            return attaque, self.vie_cible
