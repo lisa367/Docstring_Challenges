@@ -1,6 +1,7 @@
 import random
 
-game_over = False
+# Passer un tour
+# transformer les attaques en fonctions ou en classes
 
 vie_joueur = 50
 vie_ennemi = 50
@@ -56,9 +57,13 @@ while vie_joueur > 0 or vie_ennemi > 0:
         else:
             print("Il ne reste plus de potions.")
 
+if vie_joueur == 0 and vie_ennemi > 0:
+    print("Vous avez perdu la partie")
+elif vie_joueur > 0 and vie_ennemi == 0:
+    print("Vous avez gagné la partie")
+elif vie_joueur == 0 and vie_ennemi == 0:
+    print("Match nul")
 
-# Passer un tour
-# transformer les attaques en fonctions ou en classes
 
 
     """        attaque_joueur = random.randint(5, 10)
