@@ -73,9 +73,7 @@ while vie_joueur > 0 or vie_ennemi > 0:
         print(f"Il vous restes {vie_joueur} points de vie")
         print(f"Il reste {vie_ennemi} points de vie à l'ennemi")
 
-    """
-
-    class Attaque:
+            class Attaque:
         def __init__(self, attaquant, vie_cible, minimum, maximum):
             self.attaquant = attaquant
             self.vie_cible = vie_cible
@@ -89,3 +87,6 @@ while vie_joueur > 0 or vie_ennemi > 0:
             self.vie_cible -= attaque
 
             return attaque, self.vie_cible
+
+    """
+
