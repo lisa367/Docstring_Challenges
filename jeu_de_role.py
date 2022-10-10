@@ -25,16 +25,18 @@ while vie_joueur > 0 or vie_ennemi > 0:
     saute_un_tour = False
     if choix == 1:
         if saute_un_tour:
-            attaque_ennemi()
+            #attaque_ennemi()
+            attaque_ennemi = random.randint(5, 15)
+            vie_joueur -= attaque_ennemi
         else:
-            attaque_joueur()
-            attaque_ennemi()
+            #attaque_joueur()
+            #attaque_ennemi()
+            attaque_joueur = random.randint(5, 10)
+            attaque_ennemi = random.randint(5, 15)
+            vie_joueur -= attaque_ennemi
+            vie_ennemi -= attaque_joueur
 
-        attaque_joueur = random.randint(5, 10)
-        attaque_ennemi = random.randint(5, 15)
-
-        vie_joueur -= attaque_ennemi
-        vie_ennemi -= attaque_joueur
+        
 
         if saute_un_tour == False:
             print(f"Vous avez infligé {attaque_joueur} points de dégâts à l'ennemi")
