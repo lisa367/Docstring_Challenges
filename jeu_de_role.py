@@ -37,6 +37,8 @@ while vie_joueur > 0 or vie_ennemi > 0:
 
         if saute_un_tour == False:
             print(f"Vous avez infligé {attaque_joueur} points de dégâts à l'ennemi")
+        else:
+            print("Vous sautez votre tour")
         print(f"L'ennemi vous a infligé {attaque_ennemi} points de dégâts")
 
         print(f"Il vous restes {vie_joueur} points de vie")
