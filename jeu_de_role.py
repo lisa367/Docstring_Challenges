@@ -50,6 +50,7 @@ while vie_joueur > 0 or vie_ennemi > 0:
         print("-"*30)
     
     elif choix == 2:
+        saute_un_tour = True
         if potions > 0:
             utilisation_potions = random.randint(15, 50)
             vie_joueur += utilisation_potions
