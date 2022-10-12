@@ -36,7 +36,6 @@ while vie_joueur > 0 or vie_ennemi > 0:
             vie_joueur -= attaque_ennemi
             vie_ennemi -= attaque_joueur
 
-        
 
         if saute_un_tour == False:
             print(f"Vous avez infligé {attaque_joueur} points de dégâts à l'ennemi")
@@ -48,6 +47,9 @@ while vie_joueur > 0 or vie_ennemi > 0:
         print(f"Il reste {vie_ennemi} points de vie à l'ennemi")
 
         print("-"*30)
+
+        # Resetting saute_un_tour:
+        saute_un_tour = False
     
     elif choix == 2:
         saute_un_tour = True
