@@ -79,7 +79,7 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'blog',
         'USER': 'blogadmin',
-        'PASSWORD': '123456',
+        'PASSWORD': '1234567',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
