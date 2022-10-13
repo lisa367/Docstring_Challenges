@@ -1,3 +1,5 @@
 MyBlog/.env
 liste_de_course_OOP/constantes.py
 MyBlog/src/MyBlog/__pycache__
+MyBlog/src/Posts/__pycache__/
+MyBlog/src/Posts/migrations/__pycache__/
