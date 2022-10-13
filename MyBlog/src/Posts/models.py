@@ -28,5 +28,7 @@ class BlogPost(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
         super().save(*args, **kwargs)
-        self.slug = slugify(self.title)
+        
