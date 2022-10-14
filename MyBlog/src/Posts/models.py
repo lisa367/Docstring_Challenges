@@ -7,6 +7,7 @@ from django.template.defaultfilters import slugify
 
 # class Author(models.Model):
     # author = models.CharField(max_length=100)
+from django.urls import reverse
 
 User = get_user_model()
 
@@ -35,3 +36,6 @@ class BlogPost(models.Model):
     @property
     def author_or_default(self):
         return self.author.username if self.author else "Auteur anonyme"
+
+    def get_absolute_url(self):
+        return reverse('Posts:home')
