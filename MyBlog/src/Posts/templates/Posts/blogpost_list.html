@@ -12,14 +12,14 @@
                 <h2>{{ post.title }}</h2>
 
                 {% if request.user.is_authenticated %}
-                <a href="{% url 'Posts:update' slug=post.slug %}">Modifier</a>
+                <a href="{% url 'Posts:edit' slug=post.slug %}">Modifier</a>
                 <a href="{% url 'Posts:delete' slug=post.slug %}">Supprimer</a>
                 {% endif %}
 
                 <h5>Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }} </h5>
                 <p>{{ post.content|safe|truncatewords:50 }}</p>
 
-                <form action="{% url 'Post:post' slug=post.slug %}">
+                <form action="{% url 'Posts:post' slug=post.slug %}">
                     <button>Lire l'article</button>
                 </form>
             </article>
