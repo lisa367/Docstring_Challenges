@@ -2,12 +2,13 @@ from tabnanny import verbose
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.template.defaultfilters import slugify
+from django.urls import reverse
 
 # Create your models here.
 
 # class Author(models.Model):
     # author = models.CharField(max_length=100)
-from django.urls import reverse
+
 
 User = get_user_model()
 
