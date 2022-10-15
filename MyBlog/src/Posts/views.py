@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 
 from Posts.models import BlogPost
 # Create your views here.
@@ -22,3 +22,16 @@ class BlogPostCreate(CreateView):
     model = BlogPost
     template_name = "Posts/blogpost_create.html"
     fields = ["title", "content", ]
+
+
+class BlogPostUpdate(UpdateView):
+    model = BlogPost
+    template_name = "Posts/blogpost_update.html"
+    fields = ["title", "content", "published"]
+
+
+class BLogPostDelete(DeleteView):
+    model = BlogPost
+    template_name = "Posts/blogpost_delete.html"
+
+
