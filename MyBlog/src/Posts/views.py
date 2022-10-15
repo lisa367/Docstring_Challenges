@@ -30,7 +30,7 @@ class BlogPostUpdate(UpdateView):
     fields = ["title", "content", "published"]
 
 
-class BLogPostDelete(DeleteView):
+class BlogPostDelete(DeleteView):
     model = BlogPost
     template_name = "Posts/blogpost_delete.html"
 
