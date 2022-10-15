@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
 
 from Posts.models import BlogPost
 # Create your views here.
@@ -19,18 +21,21 @@ class BlogHomeView(ListView):
         return queryset.filter(published=True)
 
 
+@method_decorator(login_required, name='dispatch')
 class BlogPostCreate(CreateView):
     model = BlogPost
     template_name = "Posts/blogpost_create.html"
-    fields = ["title", "content", ]
+    fields = ["title", "content", "created_on", ]
 
 
+@method_decorator(login_required, name='dispatch')
 class BlogPostUpdate(UpdateView):
     model = BlogPost
     template_name = "Posts/blogpost_edit.html"
     fields = ["title", "content", "published"]
 
 
+@method_decorator(login_required, name='dispatch')
 class BlogPostDelete(DeleteView):
     model = BlogPost
     # template_name = "Posts/blogpost_delete.html"
