@@ -33,7 +33,7 @@ class BlogPostUpdate(UpdateView):
 
 class BlogPostDelete(DeleteView):
     model = BlogPost
-    template_name = "Posts/blogpost_delete.html"
+    # template_name = "Posts/blogpost_delete.html"
     success_url = reverse_lazy("Posts:home")
     context_object_name = "post"
 
