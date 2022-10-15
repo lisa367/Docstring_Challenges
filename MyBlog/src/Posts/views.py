@@ -26,7 +26,7 @@ class BlogPostCreate(CreateView):
 
 class BlogPostUpdate(UpdateView):
     model = BlogPost
-    template_name = "Posts/blogpost_update.html"
+    template_name = "Posts/blogpost_edit.html"
     fields = ["title", "content", "published"]
 
 
