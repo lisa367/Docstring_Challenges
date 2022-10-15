@@ -37,7 +37,7 @@ class BLogPostDelete(DeleteView):
 
 class BlogPostDetail(DetailView):
     model = BlogPost
-    template_name = "Posts/blogpost_detail.html"
+    # template_name = "Posts/blogpost_detail.html"
     context_object_name = "post"
 
 
