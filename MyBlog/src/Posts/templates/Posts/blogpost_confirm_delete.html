@@ -9,7 +9,7 @@
     <form method="POST">
         {% csrf_token %}
         <p>Êtes-vous sûr de vouloir supprimer l'article {{ post }} ?</p>
-        <input type="submit" value="Oui, supprimer">
+        <input type="submit" value="Oui, supprimer" class="btn btn-delete">
     </form>
 
 {% endblock %}
