@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import "reset.css";
 
-
+/* Mise en forme globale sur base.html */
 body {
     font-family: 'Raleway', sans-serif;
     background-color: mintcream;
@@ -32,6 +32,7 @@ nav {
     }
 }
 
+/* Mise en forme de la page d'accueil */
 .post-title {
     display: flex;
     align-items: center;
@@ -59,6 +60,7 @@ nav {
     margin-bottom: 1rem;
 }
 
+/* Mise en forme des articles */
 .post-detail {
     display: flex;
     flex-direction: column;
@@ -68,4 +70,21 @@ nav {
 .post-detail > h1 {
     text-transform: uppercase;
     margin-bottom: 1rem;
+}
+
+/* Mise en forme des formulaires */
+input, textarea {
+    display: block;
+    padding: .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    min-width: 600px;
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 1rem 0;
 }
