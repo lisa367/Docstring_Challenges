@@ -21,7 +21,7 @@ class BlogPost(models.Model):
     created_on = models.DateField(blank=True, null=True)
     last_updated = models.DateTimeField(auto_now=True)
     published = models.BooleanField(default=False, verbose_name="Publié")
-    thumbnail = models.ImageField(blank=True)
+    thumbnail = models.ImageField(blank=True, upload_to='MyBlog')
 
     class Meta:
         ordering = ['-created_on']
