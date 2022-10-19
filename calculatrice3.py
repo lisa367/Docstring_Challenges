@@ -20,3 +20,5 @@ operateur = operateurs.find(operation_liste[1])
 # Re-demander un input tant que la fonction de validation ne retourne pas True
 
 # Effectuer l'opération et afficher le résultat dans le terminal
+
+# split, in, eval, isdigit
