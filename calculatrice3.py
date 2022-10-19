@@ -5,12 +5,16 @@ operateurs = ["+", "-", "*", "/", "%"]
 
 #print("Veuillez entrer une opération : ")
 operation = input("Veuillez entrer une opération : ")
-operation_liste = operation.split("")
-
-if len(operation_liste) != 3:
-    print("Veuillez entrer une opération valide")
-
+operation_liste = operation.split(" ")
 operateur = operateurs.find(operation_liste[1])
+
+def validators():
+    verif1 = len(operation_liste) != 3
+    verif2 = (operation_liste[0].isdigit() and operation_liste[2].isdigit())
+    verif3 = operateur in operateurs
+    # print("Veuillez entrer une opération valide")
+
+
 
 
 # Fonction de validation dess données:
