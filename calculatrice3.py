@@ -14,6 +14,8 @@ def validators():
     verif3 = operateur in operateurs
     # print("Veuillez entrer une opération valide")
 
+    return verif1 and verif2 and verif3
+
 
 
 
