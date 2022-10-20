@@ -30,8 +30,19 @@ while condition == False:
     if v1 and v2 and v3:
         condition = True
 
-if symbole == 0:
-    pass
+a, b = calcul[0], calcul[2]
+
+if symbole == operateurs[0]:
+    print(a + b)
+elif symbole == operateurs[1]:
+    print(a - b)
+elif symbole == operateurs[2]:
+    print(a * b)
+elif symbole == operateurs[3]:
+    print(a / b)
+elif symbole == operateurs[4]:
+    print(a % b)
+
 
 # Fonction de validation dess données:
     # deux nombres et un operateur séparés d'un espace
