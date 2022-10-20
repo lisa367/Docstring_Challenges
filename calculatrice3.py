@@ -20,7 +20,8 @@ def validators():
 condition = False
 while condition == False:
     calcul = input("Veuillez entrer une opération : ").split(" ")
-    symbole = calcul.find(calcul[1])
+    # symbole = calcul.find(calcul[1])
+    symbole = calcul[1]
 
     v1 = len(operation_liste) != 3
     v2 = (operation_liste[0].isdigit() and operation_liste[2].isdigit())
@@ -29,6 +30,8 @@ while condition == False:
     if v1 and v2 and v3:
         condition = True
 
+if symbole == 0:
+    pass
 
 # Fonction de validation dess données:
     # deux nombres et un operateur séparés d'un espace
@@ -36,6 +39,6 @@ while condition == False:
 
 # Re-demander un input tant que la fonction de validation ne retourne pas True
 
-# Effectuer l'opération et afficher le résultat dans le terminal
+# Effectuer l'opération adéquate selon l'opérateur et afficher le résultat dans le terminal
 
 # split, in, eval, isdigit
