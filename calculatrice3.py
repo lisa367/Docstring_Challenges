@@ -30,7 +30,7 @@ while condition == False:
     if v1 and v2 and v3:
         condition = True
 
-a, b = calcul[0], calcul[2]
+a, b = int(calcul[0]), int(calcul[2])
 
 if symbole == operateurs[0]:
     print(a + b)
