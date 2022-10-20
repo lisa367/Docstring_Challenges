@@ -16,7 +16,11 @@ def validators():
 
     return verif1 and verif2 and verif3
 
-
+# conditions = validators()
+condition = False
+while condition == False:
+    calcul = input("Veuillez entrer une opération : ").split(" ")
+    symbole = calcul.find(calcul[1])
 
 
 # Fonction de validation dess données:
