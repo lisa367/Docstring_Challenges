@@ -22,6 +22,13 @@ while condition == False:
     calcul = input("Veuillez entrer une opération : ").split(" ")
     symbole = calcul.find(calcul[1])
 
+    v1 = len(operation_liste) != 3
+    v2 = (operation_liste[0].isdigit() and operation_liste[2].isdigit())
+    v3 = symbole in operateurs
+
+    if v1 and v2 and v3:
+        condition = True
+
 
 # Fonction de validation dess données:
     # deux nombres et un operateur séparés d'un espace
