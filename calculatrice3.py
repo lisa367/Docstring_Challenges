@@ -2,9 +2,9 @@
 
 
 operateurs = ["+", "-", "*", "/", "%"]
-
-
 condition = False
+
+
 while condition == False:
     calcul = input("Veuillez entrer une opération : ").split(" ")
     # symbole = calcul.find(calcul[1])
@@ -19,8 +19,8 @@ while condition == False:
     else:
         print("Veuillez entrer une opération valide")
 
-a, b = int(calcul[0]), int(calcul[2])
 
+a, b = int(calcul[0]), int(calcul[2])
 if symbole == operateurs[0]:
     print(a + b)
 elif symbole == operateurs[1]:
