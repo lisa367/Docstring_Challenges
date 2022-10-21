@@ -4,8 +4,6 @@
 operateurs = ["+", "-", "*", "/", "%"]
 
 
-
-# conditions = validators()
 condition = False
 while condition == False:
     calcul = input("Veuillez entrer une opération : ").split(" ")
@@ -18,6 +16,8 @@ while condition == False:
 
     if v1 and v2 and v3:
         condition = True
+    else:
+        print("Veuillez entrer une opération valide")
 
 a, b = int(calcul[0]), int(calcul[2])
 
@@ -44,7 +44,7 @@ elif symbole == operateurs[4]:
 # split, in, eval, isdigit
 
 """
-#print("Veuillez entrer une opération : ")
+# print("Veuillez entrer une opération : ")
 operation = input("Veuillez entrer une opération : ")
 operation_liste = operation.split(" ")
 operateur = operateurs.find(operation_liste[1])
@@ -56,5 +56,7 @@ def validators():
     # print("Veuillez entrer une opération valide")
 
     return verif1 and verif2 and verif3
+
+# conditions = validators()
     
 """
