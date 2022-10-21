@@ -3,18 +3,7 @@
 
 operateurs = ["+", "-", "*", "/", "%"]
 
-#print("Veuillez entrer une opération : ")
-operation = input("Veuillez entrer une opération : ")
-operation_liste = operation.split(" ")
-operateur = operateurs.find(operation_liste[1])
 
-def validators():
-    verif1 = len(operation_liste) != 3
-    verif2 = (operation_liste[0].isdigit() and operation_liste[2].isdigit())
-    verif3 = operateur in operateurs
-    # print("Veuillez entrer une opération valide")
-
-    return verif1 and verif2 and verif3
 
 # conditions = validators()
 condition = False
@@ -23,8 +12,8 @@ while condition == False:
     # symbole = calcul.find(calcul[1])
     symbole = calcul[1]
 
-    v1 = len(operation_liste) != 3
-    v2 = (operation_liste[0].isdigit() and operation_liste[2].isdigit())
+    v1 = len(calcul) != 3
+    v2 = (calcul[0].isdigit() and calcul[2].isdigit())
     v3 = symbole in operateurs
 
     if v1 and v2 and v3:
@@ -53,3 +42,19 @@ elif symbole == operateurs[4]:
 # Effectuer l'opération adéquate selon l'opérateur et afficher le résultat dans le terminal
 
 # split, in, eval, isdigit
+
+"""
+#print("Veuillez entrer une opération : ")
+operation = input("Veuillez entrer une opération : ")
+operation_liste = operation.split(" ")
+operateur = operateurs.find(operation_liste[1])
+
+def validators():
+    verif1 = len(operation_liste) != 3
+    verif2 = (operation_liste[0].isdigit() and operation_liste[2].isdigit())
+    verif3 = operateur in operateurs
+    # print("Veuillez entrer une opération valide")
+
+    return verif1 and verif2 and verif3
+    
+"""
