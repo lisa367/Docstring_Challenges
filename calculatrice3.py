@@ -2,17 +2,19 @@
 
 
 operateurs = ["+", "-", "*", "/", "%"]
+calcul = input("Veuillez entrer une opération : ").split(" ")
 
 def validators(string):
-    v1 = len(calcul) != 3
+    v1 = (len(calcul) == 3)
 
     if v1:
+        symbole = calcul[1]
         v2 = (calcul[0].isdigit() and calcul[2].isdigit())
         v3 = symbole in operateurs
 
     return v1 and v2 and v3
 
-condition = False
+condition = validators(calcul)
 
 
 while condition == False:
