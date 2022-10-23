@@ -2,6 +2,16 @@
 
 
 operateurs = ["+", "-", "*", "/", "%"]
+
+def validators(string):
+    v1 = len(calcul) != 3
+
+    if v1:
+        v2 = (calcul[0].isdigit() and calcul[2].isdigit())
+        v3 = symbole in operateurs
+
+    return v1 and v2 and v3
+
 condition = False
 
 
