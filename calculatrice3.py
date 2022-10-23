@@ -19,17 +19,10 @@ condition = validators(calcul)
 
 while condition == False:
     calcul = input("Veuillez entrer une opération : ").split(" ")
-    symbole = calcul[1]
+    condition = validators(calcul)
 
-    v1 = len(calcul) != 3
-    v2 = (calcul[0].isdigit() and calcul[2].isdigit())
-    v3 = symbole in operateurs
 
-    if v1 and v2 and v3:
-        condition = True
-        break
-    else:
-        print("Veuillez entrer une opération valide")
+symbole = calcul[1]
 
 
 a, b = int(calcul[0]), int(calcul[2])
@@ -70,5 +63,20 @@ def validators():
     return verif1 and verif2 and verif3
 
 # conditions = validators()
+
+
+while condition == False:
+    calcul = input("Veuillez entrer une opération : ").split(" ")
+    symbole = calcul[1]
+
+    v1 = len(calcul) != 3
+    v2 = (calcul[0].isdigit() and calcul[2].isdigit())
+    v3 = symbole in operateurs
+
+    if v1 and v2 and v3:
+        condition = True
+        break
+    else:
+        print("Veuillez entrer une opération valide")
     
 """
