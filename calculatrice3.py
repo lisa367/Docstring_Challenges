@@ -7,7 +7,6 @@ condition = False
 
 while condition == False:
     calcul = input("Veuillez entrer une opération : ").split(" ")
-    # symbole = calcul.find(calcul[1])
     symbole = calcul[1]
 
     v1 = len(calcul) != 3
@@ -16,6 +15,7 @@ while condition == False:
 
     if v1 and v2 and v3:
         condition = True
+        break
     else:
         print("Veuillez entrer une opération valide")
 
