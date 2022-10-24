@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Lading Page</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to MyBlog</h1>
+    <a href="{% url 'admin-site' %}">Admin</a>
+    <a href="{% url 'Posts:home' %}">MyBlog Index</a>
+{% endblock %}
