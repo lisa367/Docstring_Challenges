@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from MyBlog import settings
+from MyBlog.views import LandingPageView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', LandingPageView.as_view(), name='landing-page'),
+    path('admin/', admin.site.urls, name='admin-site'),
     path('blog/', include('Posts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
