@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DocShop</title>
+</head>
+<body>
+
+    <a href="{% url %}">
+        <h1>DocShop</h1>
+    </a>
+
+    {% if not user.is_authenticated %}
+    <a href="{% url 'signup' %}">S'inscrire</a>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+</body>
+</html>
