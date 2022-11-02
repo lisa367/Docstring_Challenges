@@ -4,12 +4,12 @@
 {% block content %}
 
     <h2>{{ product.name }}</h2>
-    <img src="" alt="">
+    <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="max-width: 300px;">
     <h4>{{ product.price }}</h4>
     <p>{{ product.description }}</p>
 
 <br>
     <p>{{ product.stock }} en stock</p>
-    <p>Ajouter au panier</p>
+    <a href="{%% url 'add-to-cart' slug=product.slug %}">Ajouter au panier</a>
 
 {% endblock %}
