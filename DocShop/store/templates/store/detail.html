@@ -10,6 +10,11 @@
 
 <br>
     <p>{{ product.stock }} en stock</p>
-    <a href="{%% url 'add-to-cart' slug=product.slug %}">Ajouter au panier</a>
+
+{% if user.is_authenticated %}
+    <p>
+        <a href="{%% url 'add-to-cart' slug=product.slug %}">Ajouter au panier</a>
+    </p>
+{% endif %}
 
 {% endblock %}
