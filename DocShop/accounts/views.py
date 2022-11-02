@@ -1,5 +1,10 @@
+from django.contrib import messages
 from django.contrib.auth import get_user_model, login, logout, authenticate
+from django.contrib.auth.decorators import login_required
+from django.forms import model_to_dict
 from django.shortcuts import render, redirect
+
+from accounts.forms import UserForm
 
 User = get_user_model()
 
@@ -32,5 +37,23 @@ def logout_user(request):
     logout(request)
     return redirect('index')
 
+
+@login_required
+def profile(request):
+    if request.method == "POST":
+        if authenticate(email=request.POST.get("email"), password=request.POST.get("password")):
+            user = request.user
+            user.first_name = request.POST.get("first_name")
+            user.last_name = request.POST.get("last_name")
+            # user.email = request.POST.get("email")
+            # user.password = request.POST.get("password")
+            user.save()
+        else:
+            messages.add_message(request, messages.ERROR, "Le mot de passe n'est pas valide")
+
+        return redirect("profile")
+
+    form = UserForm(initial=model_to_dict(request.user, exclude="password"))
+    return render(request, "accounts/profile.html", context={"form": form})
 
 
