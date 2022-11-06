@@ -1,6 +1,8 @@
+from django.forms import modelformset_factory
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 
+from store.forms import OrderForm
 from store.models import Product, Cart, Order
 
 
@@ -37,7 +39,10 @@ def add_to_cart(request, slug):
 
 def cart(request):
     cart = get_object_or_404(Cart, user=request.user)
-    return render(request, "store/cart.html", context={"orders": cart.orders.all()})
+    OrderFormSet = modelformset_factory(Order, form=OrderForm, extra=0)
+    formset = OrderFormSet(queryset=Order.objects.filter(user=request.user))
+    return render(request, "store/cart.html", context={"orders": cart.orders.all(),
+                                                       "forms": formset})
 
 
 def delete_cart(request):
