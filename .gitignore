@@ -4,3 +4,5 @@ MyBlog/src/MyBlog/__pycache__
 MyBlog/src/Posts/__pycache__/
 MyBlog/src/Posts/migrations/__pycache__/
 MyBlog/.idea/
+DocShop/.idea/
+DocShop/shop/__pycache__/
