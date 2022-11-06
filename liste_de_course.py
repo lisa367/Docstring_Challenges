@@ -30,12 +30,9 @@ while context == False:
         if a_ajouter not in liste_de_course:
             liste_de_course.append(a_ajouter)
             print(f"L'élément {a_ajouter} a bien été ajouté à la liste.")
-            print("*"*15)
-            print("\n")
+
         else:
             print(f"L'élément {a_ajouter} se trouve déjà dans la liste.")
-            print("*"*15)
-            print("\n")
 
     elif int(choix) == 2:
         a_retirer = input("Entrez le nom d'un élément à retirer de la liste: ")
@@ -52,18 +49,12 @@ while context == False:
             print("Voici le contenu de votre liste:")
             for i, item in enumerate(liste_de_course, 1):
                 print(f"{i}. {item}")
-            print("*"*15)
-            print("\n")
         else:
             print("Votre liste ne contient aucun élément.")
-            print("*"*15)
-            print("\n")
 
     elif int(choix) == 4:
         liste_de_course.clear()
         print("Votre liste a bien été vidée de son contenu.")
-        print("*"*15)
-        print("\n")
 
     elif int(choix) == 5:
         print("A bientôt !")
@@ -71,7 +62,8 @@ while context == False:
 
     else:
         print("Veuillez rentrer un chiffre compris entre 1 et 5")
-        print("*"*15)
-        print("\n")
+
+    print("*"*15)
+    print("\n")
 
 sys.exit()
