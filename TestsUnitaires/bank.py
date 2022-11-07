@@ -11,7 +11,7 @@ class Account:
         self.balance += amount
 
     def withdraw(self, amount):
-        if self.balance < 0:
+        if self.balance - amount < 0:
             raise ValueError(f"Not enough money in account {self.identifier}")
         self.balance -= amount
 
