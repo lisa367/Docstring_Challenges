@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from main import add
+from main import add, divide
 
 
 class TestCalculatrice(TestCase):
@@ -19,7 +19,17 @@ class TestCalculatrice(TestCase):
         with self.assertRaises(TypeError):
             add(None, None)
 
+    def test_divide_two_numbers(self):
+        self.assertEqual(divide(10, 2), 5)
+
 
 # main()
+
 # python -m unittest tests.py --verbose
 # python -m unittest
+
+# python3 -m venv .env
+# source .env/bin/activate
+# pip install coverage
+# coverage run -m unittest tests
+# coverage html
