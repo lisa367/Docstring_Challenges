@@ -8,3 +8,7 @@ DocShop/.idea/
 DocShop/shop/__pycache__/
 ._liste_de_course.py
 MyBlog/src/Posts/templates/Posts/._blogpost_confirm_delete.html
+DocShop/shop/__pycache__
+TestsUnitaires/__pycache__
+TestsUnitaires/.env
+TestsUnitaires/._index.html
