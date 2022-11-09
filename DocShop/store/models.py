@@ -10,7 +10,7 @@ from shop.settings import AUTH_USER_MODEL
 
 class Product(models.Model):
     name = models.CharField(max_length=150, blank=False)
-    slug = models.SlugField(max_length=150)
+    slug = models.SlugField(max_length=150, blank=True)
     price = models.FloatField(default=0.0)
     stock = models.IntegerField(default=0)
     description = models.TextField(blank=True)
@@ -24,12 +24,13 @@ class Product(models.Model):
         return f"{self.name} ({self.stock})"
 
     def save(self, *args, **kwargs):
+        # self.slug = self.slug or slugify(self.name)
         if not self.slug:
             self.slug = slugify(self.name)
         super().save(*args, ** kwargs)
 
     def get_absolute_url(self):
-        return reverse("product", kwargs={"slug": self.slug})
+        return reverse("store:product", kwargs={"slug": self.slug})
 
 
 class Order(models.Model):
