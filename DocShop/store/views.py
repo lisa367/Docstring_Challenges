@@ -45,6 +45,15 @@ def cart(request):
                                                        "forms": formset})
 
 
+def update_quatities(request):
+    OrderFormSet = modelformset_factory(Order, form=OrderForm, extra=0)
+    formset = OrderFormSet(request.POST, queryset=Order.objects.filter(user=request.user))
+    if formset.is_valid():
+        formset.save()
+    
+    return redirect('cart')
+
+
 def delete_cart(request):
     # if cart := request.user.cart :
         # pass
@@ -53,3 +62,12 @@ def delete_cart(request):
         cart.delete()
 
     return redirect('index')
+
+
+def checkout_success(request):
+    pass
+
+
+def create_checkout_session(request):
+    pass
+
