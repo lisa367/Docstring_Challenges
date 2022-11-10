@@ -1,4 +1,5 @@
 from django.forms import modelformset_factory
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 
@@ -38,11 +39,14 @@ def add_to_cart(request, slug):
 
 
 def cart(request):
-    cart = get_object_or_404(Cart, user=request.user)
+    # cart = get_object_or_404(Cart, user=request.user)
+    orders = Order.objects.filter(user=request.user)
+    if orders.count() == 0:
+        return HttpResponse("Votre panier est vide")
     OrderFormSet = modelformset_factory(Order, form=OrderForm, extra=0)
-    formset = OrderFormSet(queryset=Order.objects.filter(user=request.user))
-    return render(request, "store/cart.html", context={"orders": cart.orders.all(),
-                                                       "forms": formset})
+    formset = OrderFormSet(queryset=orders)
+    # return render(request, "store/cart.html", context={"orders": cart.orders.all(), "forms": formset})
+    return render(request, "store/cart.html", context={"orders": cart.orders.all(), "forms": formset})
 
 
 def update_quatities(request):
